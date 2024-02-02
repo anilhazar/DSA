@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int dynamic1DArray(int **arrayb, int elementCount){
+int dynamic1DArray(int **arrayb, int elementCount)
+{
     int i;
     *arrayb=(int*)malloc(sizeof(int)*elementCount);
     for(i=0; i<elementCount; i++)
@@ -12,7 +13,8 @@ int dynamic1DArray(int **arrayb, int elementCount){
 
 }
 
-int main(){
+int main()
+{
 
     int *ram;
     ram=(int*) malloc(sizeof(int));
@@ -36,4 +38,3 @@ int main(){
     dynamic1DArray(&arrayb,5);
 
 }
-
