@@ -11,7 +11,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
         for (int i = 0; i < length; i++) {
 
-            for (int j = 0; j < length; j++) {
+            for (int j = i; j < length; j++) {
 
                 tempChar = s.charAt(j);
 
