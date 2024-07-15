@@ -2,9 +2,7 @@
 
 This repository contains my implementations of various data structures and algorithms.
 
-# C
-
-## Projects
+## C Projects
 
 ### BinarySearchTreeOperations
 
@@ -17,6 +15,12 @@ This code performs various operations on a linked list. It includes creating a l
 ### StackOperations
 
 This code performs various operations on a stack. It includes creating a stack, inserting nodes, deleting nodes, printing the stack, and destroying the stack.
+
+## Java Projects
+
+### LongestSubstringWithoutRepeatingCharacters
+
+This Java project finds the length of the longest substring without repeating characters in a given string. It utilizes a HashSet to efficiently track characters and determine the length of the longest substring without repetition.
 
 ## Contact
 
