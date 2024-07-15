@@ -1,29 +1,24 @@
-import java.util.HashSet;
+import java.util.HashMap;
 
 public class LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
-
+        
         String s = "abdfca";
-        HashSet<Character> hashSet = new HashSet();
-        int length = s.length();
-        int max = 0;
-        char tempChar;
+        HashMap<Character, Integer> map = new HashMap<>();
+        int maxLength = 0;
+        int left = 0;
 
-        for (int i = 0; i < length; i++) {
+        for (int right = 0; right < s.length(); right++) {
+            char currentChar = s.charAt(right);
 
-            for (int j = i; j < length; j++) {
-
-                tempChar = s.charAt(j);
-
-                if (!(hashSet.contains(tempChar))) {
-                    hashSet.add(tempChar);
-                    max = Math.max(max, hashSet.size());
-                } else {
-                    break;
-                }
+            if (map.containsKey(currentChar)) {
+                left = Math.max(map.get(currentChar) + 1, left);
             }
-            hashSet.clear();
+
+            map.put(currentChar, right);
+            maxLength = Math.max(maxLength, right - left + 1);
         }
-        System.out.println("Length of Longest Substring Without Repeating Characters is: " + max);
+
+        System.out.println("Length of Longest Substring Without Repeating Characters is: " + maxLength);
     }
 }
